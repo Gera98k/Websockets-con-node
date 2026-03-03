@@ -1,0 +1,59 @@
+*, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            padding: 36px;
+            grid-template-rows: 1fr;
+        }
+        #chat {
+            border: 1px solid #333;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 350px;
+            height: 100%;
+            position: relative;
+        }
+        #form {
+            bottom: 0;
+            display: flex;
+            height: 48px;
+            left: 0;
+            padding: 4px;
+            position: absolute;
+            right: 0;
+        }
+        #input {
+            border-radius: 9999px;
+            border: 1px solid #333;
+            flex: 1;
+            margin: 4px;
+            padding: 0 0px;
+        }
+        #input:focus {
+            outline: 0;
+        }
+        #form > button {
+            background: #09f;
+            color: #fff;
+            border: 0px;
+            margin: 4px;
+            border-radius: 4px;
+        }
+        #form > button:hover {
+
+        }
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #messages > li {
+            padding: .5rem 1rem;
+        }
+        #messages>li:nth-child(odd) {
+            background-color: rgba(0,0,0,.1);
+        }
