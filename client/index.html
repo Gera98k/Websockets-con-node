@@ -45,6 +45,7 @@
                 </li>`;
             messages.insertAdjacentHTML('beforeend', item);
             socket.auth.serverOffset = serverOffset;
+            messages.scrollTop = messages.scrollHeight;
         });
 
         form.addEventListener('submit', (e) => {
@@ -109,6 +110,10 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
+            overflow-y: scroll;
+            height: 100%;
+            scroll-behavior: smooth;
+            padding-bottom: 48px;
         }
         #messages > li {
             padding: .5rem 1rem;
